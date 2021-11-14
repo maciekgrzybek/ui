@@ -237,7 +237,6 @@ function SocialAuth({
             </Typography.Text>
             <Space size={2} direction={socialLayout}>
               {providers.map((provider) => {
-                // @ts-ignore
                 const AuthIcon = SocialIcons[provider]
                 return (
                   <div
