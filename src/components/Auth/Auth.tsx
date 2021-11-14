@@ -358,6 +358,7 @@ function EmailAuth({
         <Space size={3} direction={'vertical'}>
           <Input
             label="Email address"
+            id="email"
             autoComplete="email"
             defaultValue={email}
             icon={<IconMail size={21} stroke={'#666666'} />}
@@ -367,6 +368,7 @@ function EmailAuth({
           />
           <Input
             label="Password"
+            id="password"
             type="password"
             defaultValue={password}
             autoComplete="current-password"
@@ -484,6 +486,7 @@ function MagicLink({
         <Space size={3} direction={'vertical'}>
           <Input
             label="Email address"
+            id="email"
             placeholder="Your email address"
             icon={<IconMail size={21} stroke={'#666666'} />}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>
@@ -550,6 +553,7 @@ function ForgottenPassword({
         <Space size={3} direction={'vertical'}>
           <Input
             label="Email address"
+            id="email"
             placeholder="Your email address"
             icon={<IconMail size={21} stroke={'#666666'} />}
             onChange={(e: React.ChangeEvent<HTMLInputElement>) =>

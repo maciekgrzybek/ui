@@ -1,7 +1,21 @@
+import { render, screen } from '@testing-library/react'
+import Auth from './Auth'
+import { createClient } from '@supabase/supabase-js'
+import { clientUrl, clientKey } from '../../test-utils/clientDetails'
+
+const supabase = createClient(clientUrl, clientKey)
+
 describe('#Auth', () => {
   describe('email auth view', () => {
     describe('sign in', () => {
-      it('renders Sign In view', () => {})
+      it('renders Sign In view', () => {
+        render(<Auth supabaseClient={supabase} />)
+
+        screen.getByRole('textbox', { name: 'Email address' })
+        screen.getByLabelText('Password')
+        screen.getByRole('checkbox', { name: 'Remember me' })
+        screen.getByRole('link', { name: 'Forgot your password?' })
+      })
       describe('with correct details', () => {
         it('allows to sign in', () => {})
       })
@@ -23,7 +37,7 @@ describe('#Auth', () => {
 
     describe('sign up', () => {
       it('renders Sign Up view', () => {})
-      
+
       describe('with correct details', () => {
         it('allows to sign up', () => {})
       })
