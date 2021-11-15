@@ -353,7 +353,7 @@ function EmailAuth({
   }
 
   return (
-    <form id={id} onSubmit={handleSubmit}>
+    <form id={id} onSubmit={handleSubmit} aria-label="email-auth-form">
       <Space size={6} direction={'vertical'}>
         <Space size={3} direction={'vertical'}>
           <Input
